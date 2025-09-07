@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East African Girls in Tech - Empowering East African Girls in Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --secondary-red: #d93025;
+            --accent-white: #ffffff;
+            --dark-blue: #0d47a1;
+            --light-blue: #e8f0fe;
+            --text-dark: #202124;
+            --text-light: #5f6368;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--accent-white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--accent-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .apply-btn {
+            background-color: var(--secondary-red);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .apply-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .hero {
+            background: url(https://readdy.ai/api/search-image?query=diverse%20group%20of%20young%20african%20women%20studying%20technology%20in%20modern%20classroom%2C%20natural%20lighting%2C%20professional%20setting%2C%20engaged%20learning&width=800&height=400&seq=1&orientation=landscape);
+           /* background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; */
+            height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--accent-white);
+            max-width: 600px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--secondary-red);
+            color: var(--accent-white);
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-red);
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .courses {
+            padding: 60px 0;
+            background-color: var(--accent-white);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .course-card {
+            background-color: var(--accent-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-img {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .course-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .course-card:hover .course-img img {
+            transform: scale(1.1);
+        }
+
+        .course-content {
+            padding: 20px;
+        }
+
+        .course-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .course-content .duration {
+            display: inline-block;
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .course-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--secondary-red);
+        }
+
+        .free-badge {
+            background-color: #34a853;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .details-link {
+            display: block;
+            margin-top: 15px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .details-link:hover {
+            text-decoration: underline;
+        }
+
+        .apply-now-btn {
+            display: inline-block;
+            background-color: var(--secondary-red);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .apply-now-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+        }
+
+        .about {
+            padding: 80px 0;
+            background-color: var(--light-blue);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .about-features {
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            background-color: var(--primary-blue);
+            color: var(--accent-white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .feature-text p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .countries {
+            padding: 60px 0;
+            background-color: var(--accent-white);
+        }
+
+        .flags-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .flag-item {
+            text-align: center;
+            width: 120px;
+        }
+
+        .flag-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .flag-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .flag-item p {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .headquarters {
+            background-color: var(--light-blue);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .headquarters h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .headquarters p {
+            color: var(--text-light);
+        }
+
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light-blue);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-text a:hover {
+            color: var(--primary-blue);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            color: var(--accent-white);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-3px);
+        }
+
+        .application-form {
+            background-color: var(--accent-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-blue);
+            color: var(--accent-white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        .chat-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            background-color: var(--accent-white);
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--accent-white);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h3 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: var(--accent-white);
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .chat-messages {
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message-sender {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .message-content {
+            background-color: var(--accent-white);
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-time {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            margin-top: 5px;
+            align-self: flex-end;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #eee;
+            background-color: var(--accent-white);
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .send-btn {
+            background-color: var(--primary-blue);
+            color: var(--accent-white);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .send-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        .chat-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--secondary-red);
+            color: var(--accent-white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .chat-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-toggle i {
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background-color: var(--text-dark);
+            color: var(--accent-white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent-white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-red);
+        }
+
+        .footer-column p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--accent-white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary-red);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background-color: var(--accent-white);
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            animation: modalopen 0.5s;
+        }
+
+        @keyframes modalopen {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--secondary-red);
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Course Details Modal */
+        .course-details-modal .modal-content {
+            max-width: 800px;
+        }
+
+        .course-details-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .course-details-header h2 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .course-details-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .course-details-info h3, .course-details-curriculum h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .course-details-info ul {
+            list-style: none;
+        }
+
+        .course-details-info li {
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .course-details-info li strong {
+            min-width: 120px;
+            display: inline-block;
+            color: var(--text-dark);
+        }
+
+        .course-details-curriculum ul {
+            list-style: none;
+        }
+
+        .course-details-curriculum li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .course-details-curriculum li:before {
+            content: "•";
+            color: var(--primary-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .about-content, .contact-container, .course-details-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 15px;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                    <img src="logo.jpg" alt="">
+                  <!---- <img src=  "https://via.placeholder.com/50x50"  alt="East African Girls in Tech Logo"> -->
+                    <div class="logo-text">
+                        <h1>East African Girls in Tech</h1>
+                        <p>Empowering East African Girls in Technology</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#countries">Countries</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" class="apply-btn" id="applyBtn">Apply Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Empowering East African Girls Through Technology Education</h2>
+                <p>Join our free certification programs in software development, cybersecurity, cloud computing, and more. Designed specifically for girls across East Africa.</p>
+                <a href="#" class="cta-btn" id="heroApplyBtn">Start Your Journey Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Courses</h2>
+                <p>We offer comprehensive training programs with free certification exams for girls. All courses include hands-on projects and career support.</p>
+            </div>
+
+            <div class="course-grid">
+                <!-- Software Development -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Software Development">
+                    </div>
+                    <div class="course-content">
+                        <h3>Software Development</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Learn full-stack web development with modern technologies like HTML, CSS, JavaScript, React, Node.js, and databases. Build real-world applications from scratch.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="Software Development">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Software Development">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cybersecurity">
+                    </div>
+                    <div class="course-content">
+                        <h3>Cybersecurity Fundamentals</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Master the basics of cybersecurity, including network security, encryption, threat detection, and security best practices to protect digital assets.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="Cybersecurity">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Cybersecurity">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Web Applications -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Web Applications">
+                    </div>
+                    <div class="course-content">
+                        <h3>Web Applications Development</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Develop modern web applications using frameworks like Angular, Vue.js, and Express. Learn RESTful APIs, authentication, and deployment strategies.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="Web Applications">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Web Applications">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Ethical Hacking -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ethical Hacking">
+                    </div>
+                    <div class="course-content">
+                        <h3>Ethical Hacking</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Learn penetration testing, vulnerability assessment, and ethical hacking techniques to secure systems and networks against cyber threats.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="Ethical Hacking">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Ethical Hacking">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Microsoft Azure -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Microsoft Azure">
+                    </div>
+                    <div class="course-content">
+                        <h3>Microsoft Azure Cloud</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Master cloud computing with Microsoft Azure. Learn to deploy, manage, and scale applications in the cloud with all Microsoft certifications included.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Certifications</span>
+                        </div>
+                        <a class="details-link" data-course="Microsoft Azure">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Microsoft Azure">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- CompTIA A+ -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="CompTIA A+">
+                    </div>
+                    <div class="course-content">
+                        <h3>CompTIA A+ Certification</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Gain foundational IT skills covering hardware, software, networking, and troubleshooting. Prepare for the CompTIA A+ certification exam.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="CompTIA A+">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="CompTIA A+">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- CompTIA Security+ -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="CompTIA Security+">
+                    </div>
+                    <div class="course-content">
+                        <h3>CompTIA Security+</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Learn cybersecurity fundamentals and prepare for the Security+ certification, covering threats, attacks, cryptography, and identity management.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="CompTIA Security+">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="CompTIA Security+">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Networking+ -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Networking+">
+                    </div>
+                    <div class="course-content">
+                        <h3>CompTIA Networking+</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Master networking concepts, infrastructure, operations, security, and troubleshooting. Prepare for the Networking+ certification exam.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="CompTIA Networking+">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="CompTIA Networking+">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- OSCP -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="OSCP">
+                    </div>
+                    <div class="course-content">
+                        <h3>OSCP (Offensive Security Certified Professional)</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Advanced penetration testing course teaching Kali Linux, Metasploit, and hands-on exploitation techniques. Includes free exam attempt.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="OSCP">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="OSCP">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- CCNA -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="CCNA">
+                    </div>
+                    <div class="course-content">
+                        <h3><a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html" target="_blank">Cisco Certified Network Associate (CCNA)</a></h3>
+                        <span class="duration">1 Year</span>
+                        <p>Master networking fundamentals, IP services, security fundamentals, and automation with Cisco's associate-level certification.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="CCNA">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="CCNA">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- CCNP -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="CCNP">
+                    </div>
+                    <div class="course-content">
+                        <h3><a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.html" target="_blank">Cisco Certified Network Professional (CCNP)</a></h3>
+                        <span class="duration">1 Year</span>
+                        <p>Advanced networking course covering enterprise infrastructure, security, automation, and troubleshooting for professional-level certification.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Exam</span>
+                        </div>
+                        <a class="details-link" data-course="CCNP">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="CCNP">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Digital Marketing">
+                    </div>
+                    <div class="course-content">
+                        <h3><a href="https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing" target="_blank">Digital Marketing</a></h3>
+                        <span class="duration">1 Year</span>
+                        <p>Learn SEO, social media marketing, content marketing, email marketing, PPC advertising, and analytics to build effective digital campaigns.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Certification</span>
+                        </div>
+                        <a class="details-link" data-course="Digital Marketing">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Digital Marketing">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Travel and Tourism -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Travel and Tourism">
+                    </div>
+                    <div class="course-content">
+                        <h3><a href="https://www.ecotourism.org/what-is-ecotourism/" target="_blank">Travel and Tourism</a></h3>
+                        <span class="duration">1 Year</span>
+                        <p>Explore the travel industry, tourism management, hospitality services, and sustainable tourism practices for a career in this growing sector.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Certification</span>
+                        </div>
+                        <a class="details-link" data-course="Travel and Tourism">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Travel and Tourism">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Machine Learning">
+                    </div>
+                    <div class="course-content">
+                        <h3>Machine Learning</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Master machine learning algorithms, neural networks, and AI concepts. Learn to build predictive models and implement AI solutions using Python and TensorFlow.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Certification</span>
+                        </div>
+                        <a class="details-link" data-course="Machine Learning">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Machine Learning">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data Science">
+                    </div>
+                    <div class="course-content">
+                        <h3>Data Science</h3>
+                        <span class="duration">1 Year</span>
+                        <p>Learn data analysis, visualization, statistical modeling, and big data technologies. Master Python, R, SQL, and data visualization tools to extract insights from data.</p>
+                        <div class="course-meta">
+                            <span class="price">Free for girls</span>
+                            <span class="free-badge">Free Certification</span>
+                        </div>
+                        <a class="details-link" data-course="Data Science">More Details</a>
+                        <a href="#" class="apply-now-btn" data-course="Data Science">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our School</h2>
+                <p>East African Girls in Tech is dedicated to bridging the gender gap in technology across East Africa through quality education and mentorship.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Empowering the Next Generation of Female Tech Leaders</h2>
+                    <p>Founded in 2020, East African Girls in Tech has trained over 1,000 girls in various technology disciplines. Our mission is to create equal opportunities for girls in the fast-growing tech industry.</p>
+                    <p>We partner with leading tech companies and certification bodies to provide our students with recognized credentials that open doors to rewarding careers.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Hands-on Learning</h4>
+                                <p>Our courses emphasize practical skills through real-world projects and labs.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Free Certifications</h4>
+                                <p>We cover the cost of all certification exams for our female students.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Career Support</h4>
+                                <p>We provide job placement assistance and internship opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Students learning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countries Section -->
+    <section class="countries" id="countries">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Reach Across East Africa</h2>
+                <p>We operate in all East African countries with our headquarters in Johannesburg, South Africa.</p>
+            </div>
+
+            <div class="flags-container">
+                <!-- DRC Congo -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/cd.png" alt="DRC Congo Flag">
+                    </div>
+                    <p>DRC Congo</p>
+                </div>
+
+                <!-- Tanzania -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/tz.png" alt="Tanzania Flag">
+                    </div>
+                    <p>Tanzania</p>
+                </div>
+
+                <!-- Rwanda -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/rw.png" alt="Rwanda Flag">
+                    </div>
+                    <p>Rwanda</p>
+                </div>
+
+                <!-- Burundi -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/bi.png" alt="Burundi Flag">
+                    </div>
+                    <p>Burundi</p>
+                </div>
+
+                <!-- Kenya -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/ke.png" alt="Kenya Flag">
+                    </div>
+                    <p>Kenya</p>
+                </div>
+
+                <!-- Uganda -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/ug.png" alt="Uganda Flag">
+                    </div>
+                    <p>Uganda</p>
+                </div>
+
+                <!-- South Sudan -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/ss.png" alt="South Sudan Flag">
+                    </div>
+                    <p>South Sudan</p>
+                </div>
+
+                <!-- Somalia -->
+                <div class="flag-item">
+                    <div class="flag-img">
+                        <img src="https://flagcdn.com/w80/so.png" alt="Somalia Flag">
+                    </div>
+                    <p>Somalia</p>
+                </div>
+            </div>
+
+            <div class="headquarters">
+                <h3>Headquarters</h3>
+                <p>Johannesburg, South Africa</p>
+                <div class="flag-img" style="margin: 15px auto;">
+                    <img src="https://flagcdn.com/w80/za.png" alt="South Africa Flag">
+                </div>
+                <p>CEO: HUSSEIN I.H</p>
+                <p>Phone: +27 780570803</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions about our programs? Reach out to our team for more information.</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Headquarters</h4>
+                                <p>Johannesburg, South Africa</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+27 780570803</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:info@eastafricangirlsintech.org">admin@eagit.tech</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="application-form">
+                    <h3 class="form-title">Quick Inquiry</h3>
+                    <form id="inquiryForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" class="form-control" required>
+                                <option value="">Select your country</option>
+                                <option value="DRC Congo">DRC Congo</option>
+                                <option value="Tanzania">Tanzania</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Burundi">Burundi</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="South Sudan">South Sudan</option>
+                                <option value="Somalia">Somalia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course Interest</label>
+                            <select id="course" class="form-control" required>
+                                <option value="">Select a course</option>
+                                <option value="Software Development">Software Development</option>
+                                <option value="Cybersecurity">Cybersecurity</option>
+                                <option value="Web Applications">Web Applications</option>
+                                <option value="Ethical Hacking">Ethical Hacking</option>
+                                <option value="Microsoft Azure">Microsoft Azure</option>
+                                <option value="CompTIA A+">CompTIA A+</option>
+                                <option value="CompTIA Security+">CompTIA Security+</option>
+                                <option value="CompTIA Networking+">CompTIA Networking+</option>
+                                <option value="OSCP">OSCP</option>
+                                <option value="CCST">Cisco Certified Support Technician (CCST)</option>
+                                <option value="CCNA">Cisco Certified Network Associate (CCNA)</option>
+                                <option value="CCNP">Cisco Certified Network Professional (CCNP)</option>
+                                <option value="Digital Marketing">Digital Marketing</option>
+                                <option value="Travel and Tourism">Travel and Tourism</option>
+                                <option value="Machine Learning">Machine Learning</option>
+                                <option value="Data Science">Data Science</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Modal -->
+    <div class="modal" id="applicationModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Application Form</h2>
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="appName">Full Name</label>
+                    <input type="text" id="appName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="appEmail">Email</label>
+                    <input type="email" id="appEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="appPhone">Phone Number</label>
+                    <input type="tel" id="appPhone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="appCountry">Country</label>
+                    <select id="appCountry" class="form-control" required>
+                        <option value="">Select your country</option>
+                        <option value="DRC Congo">DRC Congo</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Somalia">Somalia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appCity">City</label>
+                    <input type="text" id="appCity" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="appAge">Age</label>
+                    <input type="number" id="appAge" class="form-control" min="16" max="35" required>
+                </div>
+                <div class="form-group">
+                    <label for="appEducation">Highest Education Level</label>
+                    <select id="appEducation" class="form-control" required>
+                        <option value="">Select education level</option>
+                        <option value="High School">High School</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Bachelor's Degree">Bachelor's Degree</option>
+                        <option value="Master's Degree">Master's Degree</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appCourse">Course Applying For</label>
+                    <select id="appCourse" class="form-control" required>
+                        <option value="">Select a course</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Web Applications">Web Applications</option>
+                        <option value="Ethical Hacking">Ethical Hacking</option>
+                        <option value="Microsoft Azure">Microsoft Azure</option>
+                        <option value="CompTIA A+">CompTIA A+</option>
+                        <option value="CompTIA Security+">CompTIA Security+</option>
+                        <option value="CompTIA Networking+">CompTIA Networking+</option>
+                        <option value="OSCP">OSCP</option>
+                        <option value="CCST">Cisco Certified Support Technician (CCST)</option>
+                        <option value="CCNA">Cisco Certified Network Associate (CCNA)</option>
+                        <option value="CCNP">Cisco Certified Network Professional (CCNP)</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Travel and Tourism">Travel and Tourism</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="Data Science">Data Science</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appExperience">Previous Tech Experience (if any)</label>
+                    <textarea id="appExperience" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="appMotivation">Why do you want to join this program? (Minimum 100 words)</label>
+                    <textarea id="appMotivation" class="form-control" minlength="100" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="appReferral">How did you hear about us?</label>
+                    <select id="appReferral" class="form-control">
+                        <option value="">Select an option</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Friend/Family">Friend/Family</option>
+                        <option value="School/University">School/University</option>
+                        <option value="Advertisement">Advertisement</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="appAgreement" required>
+                    <label for="appAgreement">I certify that the information provided is accurate and I agree to the terms and conditions.</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Course Details Modal -->
+    <div class="modal course-details-modal" id="courseDetailsModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="course-details-header">
+                <h2 id="courseDetailsTitle">Course Details</h2>
+                <p class="duration">Duration: <span id="courseDetailsDuration">1 Year</span></p>
+            </div>
+            <div class="course-details-content">
+                <div class="course-details-info">
+                    <h3>Course Information</h3>
+                    <ul>
+                        <li><strong>Level:</strong> <span id="courseLevel">Beginner to Advanced</span></li>
+                        <li><strong>Format:</strong> <span id="courseFormat">Online & In-person</span></li>
+                        <li><strong>Certification:</strong> <span id="courseCertification">Included</span></li>
+                        <li><strong>Prerequisites:</strong> <span id="coursePrerequisites">Basic computer skills</span></li>
+                        <li><strong>Language:</strong> <span id="courseLanguage">English</span></li>
+                        <li><strong>Career Opportunities:</strong> <span id="courseCareers">Various tech roles</span></li>
+                    </ul>
+                </div>
+                <div class="course-details-curriculum">
+                    <h3>What You'll Learn</h3>
+                    <ul id="courseCurriculum">
+                        <li>Fundamental concepts and principles</li>
+                        <li>Practical hands-on skills</li>
+                        <li>Industry best practices</li>
+                        <li>Real-world project experience</li>
+                        <li>Exam preparation techniques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat -->
+    <div class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h3>East African Girls Chat</h3>
+            <button class="close-chat" id="closeChat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button class="send-btn" id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>East African Girls in Tech</h3>
+                    <p>Empowering East African girls through technology education and career opportunities. Bridging the gender gap in tech one student at a time.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#countries">Countries</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" id="footerApplyBtn">Apply Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</li>
+                        <li><i class="fas fa-phone-alt"></i> +27 780570803</li>
+                        <li><i class="fas fa-envelope"></i> admin@eagit.tech</li>
+                        <li><i class="fas fa-user-tie"></i> CEO: hussein</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 East African Girls in Tech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+             apiKey: "AIzaSyA1oJTDfncN0Bivxiy39nwtHy-7Rgvso8E",
+    authDomain: "qualityschool-e622a.firebaseapp.com",
+    projectId: "qualityschool-e622a",
+    storageBucket: "qualityschool-e622a.firebasestorage.app",
+    messagingSenderId: "960781985147",
+    appId: "1:960781985147:web:fcc654c524628f14a709de"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const database = firebase.database();
+        const firestore = firebase.firestore();
+
+        // DOM Elements
+        const applyBtn = document.getElementById('applyBtn');
+        const heroApplyBtn = document.getElementById('heroApplyBtn');
+        const footerApplyBtn = document.getElementById('footerApplyBtn');
+        const applicationModal = document.getElementById('applicationModal');
+        const courseDetailsModal = document.getElementById('courseDetailsModal');
+        const closeModal = document.querySelectorAll('.close-modal');
+        const applicationForm = document.getElementById('applicationForm');
+        const inquiryForm = document.getElementById('inquiryForm');
+        const chatToggle = document.getElementById('chatToggle');
+        const chatContainer = document.getElementById('chatContainer');
+        const closeChat = document.getElementById('closeChat');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const sendMessage = document.getElementById('sendMessage');
+        const detailsLinks = document.querySelectorAll('.details-link');
+        const applyNowButtons = document.querySelectorAll('.apply-now-btn');
+
+        // Course details data
+        const courseDetails = {
+            "Software Development": {
+                level: "Beginner to Advanced",
+                format: "Online & In-person",
+                certification: "Full-Stack Developer Certificate",
+                prerequisites: "Basic computer skills",
+                language: "English",
+                careers: "Web Developer, Software Engineer, Full-Stack Developer, Frontend Developer, Backend Developer",
+                curriculum: [
+                    "HTML5, CSS3, and JavaScript fundamentals",
+                    "React.js for frontend development",
+                    "Node.js and Express for backend development",
+                    "Database management with MongoDB and SQL",
+                    "RESTful API design and development",
+                    "Version control with Git and GitHub",
+                    "Deployment and DevOps basics"
+                ]
+            },
+            "Cybersecurity": {
+                level: "Beginner to Intermediate",
+                format: "Online & In-person",
+                certification: "Cybersecurity Fundamentals Certificate",
+                prerequisites: "Basic computer skills",
+                language: "English",
+                careers: "Security Analyst, Cybersecurity Specialist, Security Administrator, Vulnerability Analyst",
+                curriculum: [
+                    "Introduction to cybersecurity concepts",
+                    "Network security fundamentals",
+                    "Cryptography and encryption techniques",
+                    "Threat detection and analysis",
+                    "Security policies and procedures",
+                    "Incident response and handling",
+                    "Security best practices"
+                ]
+            },
+            "Web Applications": {
+                level: "Intermediate",
+                format: "Online & In-person",
+                certification: "Web Applications Developer Certificate",
+                prerequisites: "Basic HTML, CSS, and JavaScript",
+                language: "English",
+                careers: "Web Application Developer, Frontend Developer, JavaScript Developer, UI Developer",
+                curriculum: [
+                    "Advanced JavaScript concepts",
+                    "Frontend frameworks (Angular, Vue.js)",
+                    "Backend development with Express.js",
+                    "Authentication and authorization",
+                    "API integration and development",
+                    "Progressive Web Apps (PWA)",
+                    "Deployment strategies"
+                ]
+            },
+            "Ethical Hacking": {
+                level: "Intermediate to Advanced",
+                format: "Online & In-person",
+                certification: "Ethical Hacker Certificate",
+                prerequisites: "Networking fundamentals",
+                language: "English",
+                careers: "Ethical Hacker, Penetration Tester, Security Consultant, Vulnerability Assessor",
+                curriculum: [
+                    "Penetration testing methodologies",
+                    "Vulnerability assessment techniques",
+                    "Network scanning and enumeration",
+                    "Social engineering attacks",
+                    "Web application security testing",
+                    "Wireless network security",
+                    "Legal and ethical considerations"
+                ]
+            },
+            "Microsoft Azure": {
+                level: "Beginner to Advanced",
+                format: "Online & In-person",
+                certification: "Microsoft Azure Administrator Associate",
+                prerequisites: "Basic cloud concepts",
+                language: "English",
+                careers: "Cloud Administrator, Azure Specialist, Cloud Solutions Architect, DevOps Engineer",
+                curriculum: [
+                    "Azure infrastructure and services",
+                    "Virtual machines and networking",
+                    "Storage solutions and management",
+                    "Identity and access management",
+                    "Monitoring and security",
+                    "Azure DevOps and automation",
+                    "Cost management and optimization"
+                ]
+            },
+            "CompTIA A+": {
+                level: "Beginner",
+                format: "Online & In-person",
+                certification: "CompTIA A+ Certification",
+                prerequisites: "Basic computer skills",
+                language: "English",
+                careers: "IT Support Specialist, Help Desk Technician, Desktop Support Analyst, System Support",
+                curriculum: [
+                    "Hardware components and peripherals",
+                    "Operating system installation and configuration",
+                    "Networking fundamentals",
+                    "Mobile devices and troubleshooting",
+                    "Security fundamentals",
+                    "Operational procedures",
+                    "Troubleshooting methodology"
+                ]
+            },
+            "CompTIA Security+": {
+                level: "Intermediate",
+                format: "Online & In-person",
+                certification: "CompTIA Security+ Certification",
+                prerequisites: "Networking fundamentals",
+                language: "English",
+                careers: "Security Specialist, Security Administrator, Systems Administrator, IT Auditor",
+                curriculum: [
+                    "Threats, attacks, and vulnerabilities",
+                    "Technologies and tools for security",
+                    "Architecture and design principles",
+                    "Identity and access management",
+                    "Risk management concepts",
+                    "Cryptography and PKI",
+                    "Incident response procedures"
+                ]
+            },
+            "CompTIA Networking+": {
+                level: "Intermediate",
+                format: "Online & In-person",
+                certification: "CompTIA Network+ Certification",
+                prerequisites: "Basic networking concepts",
+                language: "English",
+                careers: "Network Administrator, Network Technician, Network Analyst, IT Consultant",
+                curriculum: [
+                    "Network architecture and topologies",
+                    "Routing and switching concepts",
+                    "Network operations and management",
+                    "Network security fundamentals",
+                    "Troubleshooting network issues",
+                    "Virtualization and cloud computing",
+                    "Wireless networks and standards"
+                ]
+            },
+            "OSCP": {
+                level: "Advanced",
+                format: "Online & In-person",
+                certification: "Offensive Security Certified Professional",
+                prerequisites: "Networking and security fundamentals",
+                language: "English",
+                careers: "Penetration Tester, Security Consultant, Red Team Member, Vulnerability Researcher",
+                curriculum: [
+                    "Kali Linux tools and techniques",
+                    "Advanced penetration testing",
+                    "Buffer overflow exploits",
+                    "Privilege escalation methods",
+                    "Client-side attacks",
+                    "Bypassing antivirus software",
+                    "Advanced exploitation techniques"
+                ]
+            },
+            "CCNA": {
+                level: "Intermediate",
+                format: "Online & In-person",
+                certification: "Cisco Certified Network Associate",
+                prerequisites: "Basic networking concepts",
+                language: "English",
+                careers: "Network Engineer, Network Administrator, Systems Engineer, IT Manager",
+                curriculum: [
+                    "Network fundamentals",
+                    "IP connectivity and services",
+                    "Security fundamentals",
+                    "Automation and programmability",
+                    "LAN switching technologies",
+                    "Routing technologies",
+                    "WAN technologies"
+                ]
+            },
+            "CCNP": {
+                level: "Advanced",
+                format: "Online & In-person",
+                certification: "Cisco Certified Network Professional",
+                prerequisites: "CCNA-level knowledge",
+                language: "English",
+                careers: "Senior Network Engineer, Network Architect, IT Director, Network Solutions Architect",
+                curriculum: [
+                    "Advanced routing technologies",
+                    "Layer 2 and Layer 3 technologies",
+                    "Infrastructure security",
+                    "Infrastructure services",
+                    "Network automation",
+                    "Troubleshooting complex networks",
+                    "Design principles"
+                ]
+            },
+            "Digital Marketing": {
+                level: "Beginner to Intermediate",
+                format: "Online & In-person",
+                certification: "Digital Marketing Professional Certificate",
+                prerequisites: "Basic computer skills",
+                language: "English",
+                careers: "Digital Marketing Specialist, SEO Analyst, Social Media Manager, Content Marketer",
+                curriculum: [
+                    "Search Engine Optimization (SEO)",
+                    "Social media marketing strategies",
+                    "Content marketing and creation",
+                    "Email marketing campaigns",
+                    "Pay-per-click (PPC) advertising",
+                    "Analytics and data interpretation",
+                    "Marketing automation tools"
+                ]
+            },
+            "Travel and Tourism": {
+                level: "Beginner to Intermediate",
+                format: "Online & In-person",
+                certification: "Travel and Tourism Specialist Certificate",
+                prerequisites: "Basic computer skills",
+                language: "English",
+                careers: "Travel Agent, Tourism Officer, Hospitality Manager, Tour Guide, Event Planner",
+                curriculum: [
+                    "Tourism industry overview",
+                    "Travel agency operations",
+                    "Hospitality management",
+                    "Destination marketing",
+                    "Customer service excellence",
+                    "Sustainable tourism practices",
+                    "Tour planning and management"
+                ]
+            },
+            "Machine Learning": {
+                level: "Intermediate to Advanced",
+                format: "Online & In-person",
+                certification: "Machine Learning Specialist Certificate",
+                prerequisites: "Basic programming knowledge, Mathematics fundamentals",
+                language: "English",
+                careers: "Machine Learning Engineer, AI Specialist, Data Scientist, Research Scientist, ML Developer",
+                curriculum: [
+                    "Python programming for data science",
+                    "Statistics and probability for ML",
+                    "Supervised and unsupervised learning",
+                    "Neural networks and deep learning",
+                    "Natural language processing",
+                    "Computer vision fundamentals",
+                    "Model deployment and production"
+                ]
+            },
+            "Data Science": {
+                level: "Intermediate to Advanced",
+                format: "Online & In-person",
+                certification: "Data Science Professional Certificate",
+                prerequisites: "Basic programming and mathematics",
+                language: "English",
+                careers: "Data Scientist, Data Analyst, Business Intelligence Analyst, Data Engineer, Data Architect",
+                curriculum: [
+                    "Data analysis with Python and R",
+                    "Statistical modeling and inference",
+                    "Data visualization techniques",
+                    "Big data technologies (Hadoop, Spark)",
+                    "Database management and SQL",
+                    "Machine learning for data science",
+                    "Data storytelling and communication"
+                ]
+            }
+        };
+
+        // Open application modal
+        [applyBtn, heroApplyBtn, footerApplyBtn].forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                applicationModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Apply Now buttons
+        applyNowButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const courseName = btn.getAttribute('data-course');
+                applicationModal.style.display = 'block';
+                document.getElementById('appCourse').value = courseName;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modals
+        closeModal.forEach(closeBtn => {
+            closeBtn.addEventListener('click', () => {
+                applicationModal.style.display = 'none';
+                courseDetailsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === applicationModal) {
+                applicationModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (e.target === courseDetailsModal) {
+                courseDetailsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle course details links
+        detailsLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const courseName = link.getAttribute('data-course');
+                showCourseDetails(courseName);
+            });
+        });
+
+        function showCourseDetails(courseName) {
+            const details = courseDetails[courseName];
+            if (details) {
+                document.getElementById('courseDetailsTitle').textContent = courseName;
+                document.getElementById('courseLevel').textContent = details.level;
+                document.getElementById('courseFormat').textContent = details.format;
+                document.getElementById('courseCertification').textContent = details.certification;
+                document.getElementById('coursePrerequisites').textContent = details.prerequisites;
+                document.getElementById('courseLanguage').textContent = details.language;
+                document.getElementById('courseCareers').textContent = details.careers;
+                
+                const curriculumList = document.getElementById('courseCurriculum');
+                curriculumList.innerHTML = '';
+                details.curriculum.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    curriculumList.appendChild(li);
+                });
+                
+                courseDetailsModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Handle application form submission
+        applicationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('appName').value;
+            const email = document.getElementById('appEmail').value;
+            const phone = document.getElementById('appPhone').value;
+            const country = document.getElementById('appCountry').value;
+            const city = document.getElementById('appCity').value;
+            const age = document.getElementById('appAge').value;
+            const education = document.getElementById('appEducation').value;
+            const course = document.getElementById('appCourse').value;
+            const experience = document.getElementById('appExperience').value;
+            const motivation = document.getElementById('appMotivation').value;
+            const referral = document.getElementById('appReferral').value;
+            
+            // Save application to Firebase
+            firestore.collection('applications').add({
+                name,
+                email,
+                phone,
+                country,
+                city,
+                age,
+                education,
+                course,
+                experience,
+                motivation,
+                referral,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                status: 'pending'
+            })
+            .then(() => {
+                alert('Application submitted successfully! We will contact you soon.');
+                applicationForm.reset();
+                applicationModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                
+                // Send confirmation email (would require Firebase Cloud Functions)
+                // This is just a simulation
+                console.log(`Email sent to ${email} with application confirmation`);
+            })
+            .catch((error) => {
+                console.error('Error submitting application: ', error);
+                alert('There was an error submitting your application. Please try again.');
+            });
+        });
+
+        // Handle inquiry form submission
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const country = document.getElementById('country').value;
+            const course = document.getElementById('course').value;
+            const message = document.getElementById('message').value;
+            
+            // Save inquiry to Firebase
+            firestore.collection('inquiries').add({
+                name,
+                email,
+                country,
+                course,
+                message,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                status: 'new'
+            })
+            .then(() => {
+                alert('Your inquiry has been submitted! We will get back to you soon.');
+                inquiryForm.reset();
+                
+                // Send confirmation email (would require Firebase Cloud Functions)
+                // This is just a simulation
+                console.log(`Email sent to ${email} with inquiry confirmation`);
+            })
+            .catch((error) => {
+                console.error('Error submitting inquiry: ', error);
+                alert('There was an error submitting your inquiry. Please try again.');
+            });
+        });
+
+        // Chat functionality
+        chatToggle.addEventListener('click', () => {
+            chatContainer.style.display = 'flex';
+            chatToggle.style.display = 'none';
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatContainer.style.display = 'none';
+            chatToggle.style.display = 'flex';
+        });
+
+        sendMessage.addEventListener('click', sendChatMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        });
+
+        function sendChatMessage() {
+            const message = chatInput.value.trim();
+            if (message) {
+                // For demo purposes, we'll just display the message
+                // In a real app, you would save to Firebase and listen for new messages
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.innerHTML = `
+                    <div class="message-sender">You</div>
+                    <div class="message-content">${message}</div>
+                    <div class="message-time">${new Date().toLocaleTimeString()}</div>
+                `;
+                chatMessages.appendChild(messageElement);
+                chatInput.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Simulate a response after 1-3 seconds
+                setTimeout(() => {
+                    const responses = [
+                        "Thank you for your message! How can we help you?",
+                        "Our team will get back to you shortly.",
+                        "Would you like more information about any of our courses?",
+                        "Thanks for reaching out to East African Girls in Tech!",
+                        "We're here to help with any questions you have."
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    
+                    const responseElement = document.createElement('div');
+                    responseElement.classList.add('message');
+                    responseElement.innerHTML = `
+                        <div class="message-sender">Support</div>
+                        <div class="message-content">${randomResponse}</div>
+                        <div class="message-time">${new Date().toLocaleTimeString()}</div>
+                    `;
+                    chatMessages.appendChild(responseElement);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000 + Math.random() * 2000);
+            }
+        }
+
+        // In a real implementation, you would:
+        // 1. Set up Firebase Authentication for user sign-in
+        // 2. Listen for new chat messages from the database
+        // 3. Implement proper user identification and security rules
+
+        // Initialize chat with a welcome message
+        window.addEventListener('load', () => {
+            const welcomeElement = document.createElement('div');
+            welcomeElement.classList.add('message');
+            welcomeElement.innerHTML = `
+                <div class="message-sender">Support</div>
+                <div class="message-content">Welcome to East African Girls in Tech! How can we help you today?</div>
+                <div class="message-time">${new Date().toLocaleTimeString()}</div>
+            `;
+            chatMessages.appendChild(welcomeElement);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
